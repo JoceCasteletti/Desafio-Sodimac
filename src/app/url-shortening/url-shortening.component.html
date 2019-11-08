@@ -1,0 +1,33 @@
+<section class="row">
+  <div class="col">
+    <h2 id="desafio_url_corta">Desafío Url Corta</h2>
+    <p>Descripción del desafío</p>
+    <div class="row">
+      <form class="col">
+        <div class="form-group">
+          <label for="url_shortening_input">URL Completa</label>
+          <input #url_shortening_input id="url_shortening_input" class="form-control" type="text" placeholder="URL">
+          <small class="form-text text-muted">* Falta validación formato URL.</small>
+        </div>
+        <div class="form-group">
+          <label for="url_shortening_result">Resultado</label>
+          <input type="text" class="form-control" id="url_shortening_result" readonly [(ngModel)]="shortUrlResult" name="url_shortening_result">
+        </div>
+        <button id="url_shortening_process" type="button" class="btn btn-primary" (click)="showShortUrlResult(url_shortening_input.value)">Generar URL Corta</button>
+      </form>
+      <form class="col">
+        <div class="form-group">
+          <label for="url_unshortening_input">URL Corta</label>
+          <input #url_unshortening_input id="url_unshortening_input" class="form-control" type="text" placeholder="URL Corta">
+          <small class="form-text text-muted">&nbsp;</small>
+        </div>
+        <div class="form-group">
+          <label for="url_unshortening_result">Resultado</label>
+          <input type="text" class="form-control" id="url_unshortening_result" readonly [(ngModel)]="unshortUrlResult" name="url_unshortening_result">
+          <small class="form-text"></small>
+        </div>
+        <button id="url_unshortening_process" type="button" class="btn btn-primary" (click)="showUnshortUrlResult(url_unshortening_input.value)">Generar URL Completa</button>
+      </form>
+    </div>
+  </div>
+</section>
