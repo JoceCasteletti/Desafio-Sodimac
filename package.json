@@ -1,0 +1,25 @@
+{
+  "name": "desafio-sodimac",
+  "version": "1.0.0",
+  "description": "Desafío Sodimac",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/JoceCasteletti/desafio-sodimac.git"
+  },
+  "keywords": [
+    "dasafio",
+    "sodimac",
+    "maxprofit",
+    "rest",
+    "api"
+  ],
+  "author": "Jocelyn Casteletti",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JoceCasteletti/desafio-sodimac/issues"
+  },
+  "homepage": "https://github.com/JoceCasteletti/desafio-sodimac#readme"
+}
