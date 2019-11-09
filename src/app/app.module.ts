@@ -9,6 +9,10 @@ import { HomeComponent } from './home/home.component';
 import { FormsModule } from "@angular/forms";
 import { SuperHeroComponent } from './super-hero/super-hero.component';
 import { HttpClientModule } from "@angular/common/http";
+import {setTheme} from "ngx-bootstrap";
+import { CollapseModule } from 'ngx-bootstrap/collapse';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 @NgModule({
   declarations: [
@@ -22,9 +26,16 @@ import { HttpClientModule } from "@angular/common/http";
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    CollapseModule.forRoot(),
+    BrowserAnimationsModule,
+    ModalModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor() {
+    setTheme('bs4');
+  }
+}

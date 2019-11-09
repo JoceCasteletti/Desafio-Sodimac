@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, TemplateRef} from '@angular/core';
 import { ApiService } from "../api.service";
+import { BsModalRef, BsModalService } from "ngx-bootstrap";
 
 @Component({
   selector: 'app-super-hero',
@@ -9,20 +10,22 @@ import { ApiService } from "../api.service";
 export class SuperHeroComponent implements OnInit {
 
   heroesList;
+  modalRef: BsModalRef;
 
-  constructor(private api: ApiService) { }
+  constructor(private api: ApiService, private modalService: BsModalService) { }
 
   ngOnInit() {
   }
 
   /**
-   * Obtiene superhéroe.
+   * Abre modal con los detalles del superhéroe.
    *
    * @param id Identificador del superhéroe
    */
-  getSuperHero (id) {
+  openModal(template: TemplateRef<any>, id: number) {
     this.api.getSuperHero(id).subscribe(data => {
-      console.log(data);
+      this.modalRef = this.modalService.show(template);
+      this.modalRef.content = data;
     });
   }
 
