@@ -17,8 +17,8 @@ export class StocksComponent implements OnInit {
    * En base a una cadena de números separada por
    * comas, pasarlo a arreglo y buscar la mejor ganancia.
    *
-   * @param {string} strValue - Números separados por coma
-   * @returns {int} - Mayor ganancia.
+   * @param str Value Números separados por coma
+   * @return Mayor ganancia.
    */
   showResult(strValue) {
     const value = strValue.split(',').map(x => parseInt(x));
@@ -29,8 +29,8 @@ export class StocksComponent implements OnInit {
    * Dado un arreglo de precios de acciones, retornar
    * la máxima ganancia.
    *
-   * @param {[]} stocksPrices - Arreglo de precios de acciones.
-   * @returns {int} - Máxima ganancia.
+   * @param stocksPrices - Arreglo de precios de acciones.
+   * @return Máxima ganancia.
    * @example
    *
    * const m = maxProfit([3, 8, 1, 12])

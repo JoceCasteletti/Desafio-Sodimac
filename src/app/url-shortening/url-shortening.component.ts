@@ -20,7 +20,7 @@ export class UrlShorteningComponent implements OnInit {
    * Convierte URL completa a URL corta, que es un string de
    * N caracteres al azar.
    *
-   * @param {string} url - URL a transformar en URL corta.
+   * @param url - URL a transformar en URL corta.
    */
   showShortUrlResult = (url) => {
     this.shortUrlResult = this.generateShortUrl(url);
@@ -40,8 +40,8 @@ export class UrlShorteningComponent implements OnInit {
    * Dada una URL completa, generar una cadena al azar como
    * URL corta.
    *
-   * @param {string} url - La URL completa.
-   * @returns {string} - La URL corta.
+   * @param url La URL completa.
+   * @return La URL corta.
    */
   generateShortUrl = (url) => {
     const shortUrlLength = 6;
@@ -63,8 +63,8 @@ export class UrlShorteningComponent implements OnInit {
    * En base a una URL corta, devolver valor de la URL completa,
    * si esta no existe, retornar falso.
    *
-   * @param {string} shortUrl - La URL corta.
-   * @return {boolean|string} - La URL completa o false si no existe la URL corta.
+   * @param shortUrl La URL corta.
+   * @return La URL completa o false si no existe la URL corta.
    */
   unshortenUrl = (shortUrl) => {
     if (this.urlStorage.has(shortUrl)) {
